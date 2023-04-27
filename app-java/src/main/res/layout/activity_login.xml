@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:background="@drawable/bg_main">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentTop="true">
+        <TextView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trattention"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_below="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/scrollview_shape_round"
+        android:layout_margin="40dp"
+        android:padding="80dp"
+        android:elevation="10dp">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:text="登入"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:textSize="40sp"
+            android:letterSpacing="0.2"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="@android:dimen/app_icon_size"
+            android:ems="10"
+            android:hint="信箱"
+            android:inputType="textEmailAddress"
+            android:text="michellechen58@gmail.com" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email"
+            android:layout_marginTop="@android:dimen/app_icon_size"
+            android:ems="10"
+            android:hint="密碼"
+            android:inputType="textPassword"
+            android:text="123456" />
+        <TextView
+            android:id="@+id/ForgetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="忘記密碼"
+            android:layout_below="@+id/password"
+            android:layout_marginTop="@android:dimen/app_icon_size"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:id="@+id/registration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="註冊"
+            android:layout_below="@+id/password"
+            android:layout_alignStart="@+id/ForgetPassword"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="@android:dimen/app_icon_size"/>
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button_yellow_shape_round"
+            android:paddingHorizontal="30dp"
+            android:letterSpacing="0.2"
+            android:textColor="@color/blue"
+            android:text="確認"
+            android:textSize="20sp"
+            android:elevation="5dp"
+            android:layout_below="@id/registration" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
